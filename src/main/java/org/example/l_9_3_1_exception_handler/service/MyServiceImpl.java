@@ -20,8 +20,7 @@ public class MyServiceImpl implements MyService {
 
     @Override
     public ResponseModel<DataModel> getRuntimeException(boolean isTrue) {
-        if(!isTrue)
-            throw new RuntimeException("RuntimeException");
+        if(!isTrue) throw new RuntimeException("RuntimeException");
         return ResponseModel.of(getData());
     }
 
@@ -36,8 +35,7 @@ public class MyServiceImpl implements MyService {
 
     @Override
     public ResponseModel<DataModel> getResponseStatusException(boolean isTrue) {
-        if(!isTrue)
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "MyException");
+        if(!isTrue) throw new ResponseStatusException(HttpStatus.CONFLICT, "MyException");
         return ResponseModel.of(getData());
     }
 
